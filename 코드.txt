@@ -20,6 +20,7 @@ a = next(a)
 for row in a2 :
     if r in row[3] and s in row[3] and row[4] == '수출' :
         x.append(int(row[5]))
+        t = row[3]
 b2 = csv.reader(b)
 b = next(b)
 for row in b2 :
@@ -79,7 +80,7 @@ import matplotlib.pyplot as plt
 data = x
 plt.bar(range(len(data)), data)
 plt.rc('font', family='Malgun Gothic')
-plt.title('월별 ' + s + r + '수출량')
+plt.title('월별 ' + t + '수출량')
 plt.xticks(range(12),['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'], rotation=90)
 plt.xlabel('월')
 plt.ylabel('수출 중량')
